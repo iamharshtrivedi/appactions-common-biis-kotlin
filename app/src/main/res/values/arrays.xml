@@ -24,6 +24,7 @@
     </array>
     <array name="active_tasks_synonyms">
         <item>active</item>
+        <item>active tasks</item>
         <item>pending</item>
         <item>pending tasks</item>
         <item>open</item>

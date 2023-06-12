@@ -14,7 +14,8 @@
   ~ limitations under the License.
   ~
   -->
-<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+<shortcuts xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--    GET THING BII
         https://developers.google.com/assistant/app/reference/built-in-intents/common/get-thing
@@ -24,6 +25,16 @@
     -->
     <!-- Add Get Thing BII capability   -->
 
+    <capability android:name="actions.intent.GET_THING">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.harsh.android.fitactions"
+            android:targetClass="com.example.android.architecture.blueprints.todoapp.tasks.TasksActivity">
+            <parameter
+                android:name="thing.name"
+                android:key="q"/>
+        </intent>
+    </capability>
 
     <!--    OPEN APP FEATURE with inline inventory
         https://developers.google.com/assistant/app/reference/built-in-intents/common/open-app-feature
@@ -33,8 +44,45 @@
     -->
     <!-- Add Get Thing BII shortcuts   -->
 
+    <shortcut
+        android:shortcutId="active_tasks"
+        android:shortcutShortLabel="@string/label_active"
+        android:enabled="false"
+        tools:targetApi="n_mr1">
+        <capability-binding
+            android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/active_tasks_synonyms" />
+        </capability-binding>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="completed_tasks"
+        android:shortcutShortLabel="@string/label_completed"
+        android:enabled="false"
+        tools:targetApi="n_mr1">
+        <capability-binding
+            android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/completed_tasks_synonyms" />
+        </capability-binding>
+    </shortcut>
+
 
     <!-- Add Open App Feature BII capability   -->
+
+    <capability android:name="actions.intent.OPEN_APP_FEATURE">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.harsh.android.fitactions"
+            android:targetClass="com.example.android.architecture.blueprints.todoapp.tasks.TasksActivity">
+            <parameter
+                android:name="feature"
+                android:key="feature"/>
+        </intent>
+    </capability>
 
 
 </shortcuts>
