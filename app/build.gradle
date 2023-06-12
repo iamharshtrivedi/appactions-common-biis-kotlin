@@ -25,7 +25,7 @@ android {
 
     defaultConfig {
         // This ID uniquely identifies your app on the device and in Google Play Store
-        applicationId "com.harsh.android.fitactions"
+        applicationId "com.harsh.android.mytodoapp"
 
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion

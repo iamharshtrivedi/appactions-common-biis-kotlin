@@ -28,7 +28,7 @@
     <capability android:name="actions.intent.GET_THING">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.harsh.android.fitactions"
+            android:targetPackage="com.harsh.android.mytodoapp"
             android:targetClass="com.example.android.architecture.blueprints.todoapp.tasks.TasksActivity">
             <parameter
                 android:name="thing.name"
@@ -76,7 +76,7 @@
     <capability android:name="actions.intent.OPEN_APP_FEATURE">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.harsh.android.fitactions"
+            android:targetPackage="com.harsh.android.mytodoapp"
             android:targetClass="com.example.android.architecture.blueprints.todoapp.tasks.TasksActivity">
             <parameter
                 android:name="feature"
